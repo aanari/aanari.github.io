@@ -1,4 +1,5 @@
 <head>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
     body {
@@ -21,7 +22,6 @@
         border-top-color: #82cded;
         box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
         font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-        height: 180px;
         margin: auto;
         padding: 10px;
         width: 380px;
@@ -34,21 +34,19 @@
         border: solid #55bbe7 5px;
         display: inline-block;
         filter: alpha(opacity=85);
-        height: 95%;
+        height: 180px;
         margin: 0px;
         opacity: 0.90;
-        width: 45%;
+        width: 180px;
      }
 
     .details {
         background: #FFF;
         color: #333;
-        display: block;
-        float: right;
-        height: 88%;
-        margin: 0px;
+        display: inline-block;
+        margin: 0;
         padding: 10px;
-        width: 45%;
+        vertical-align: top;
      }
 
     .details h1 {
@@ -64,7 +62,14 @@
         font-weight: 100;
         line-height: 92%;
         text-align: center;
-     }
+    }
+
+    .details dl {
+        line-height: 20px;
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .details a {
         color: #000;
@@ -77,12 +82,26 @@
 
     .details dt, .details dd {
         color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .details dd {
+       display: inline;
+       margin: 0;
+       lext
+   }
+
+    .details dd:after {
+        display: block;
+        content: '';
+    }
+
+    .details dt {
         display: inline-block;
-        margin: 0px;
-        padding: 0px;
-        text-align: center;
-        width: 32%;
-     }
+        min-width: 24px;
+    }
+
     </style>
 </head>
 <body>
@@ -92,16 +111,18 @@
     <div class="details">
         <h1>Ali Anari</h1>
         <h2>San Francisco, CA</h2>
-      <dl style="line-height: 20px">
-        <dt><i class="fa fa-globe"></i></dt>
-        <dd><a target="_blank" href="#">anari.io</a></dd>
-        <dt><i class="fa fa-envelope"></i></dt>
-        <dd><a target="_blank" href="mailto:ali@anari.io">ali@anari.io</a></dd>
-        <dt><i class="fa fa-github"></i></dt>
-        <dd><a target="_blank" href="https://github.com/aanari">@aanari</a></dd>
-        <dt><i class="fa fa-linkedin"></i></dt>
-        <dd><a target="_blank" href="https://linkedin.com/in/alianari">alianari</a></dd>
-      </dl>
+        <div>
+          <dl>
+            <dt><i class="fa fa-globe"></i></dt>
+            <dd><a target="_blank" href="#">anari.io</a></dd>
+            <dt><i class="fa fa-envelope"></i></dt>
+            <dd><a target="_blank" href="mailto:ali@anari.io">ali@anari.io</a></dd>
+            <dt><i class="fa fa-github"></i></dt>
+            <dd><a target="_blank" href="https://github.com/aanari">@aanari</a></dd>
+            <dt><i class="fa fa-linkedin"></i></dt>
+            <dd><a target="_blank" href="https://linkedin.com/in/alianari">alianari</a></dd>
+          </dl>
+        </div>
     </div>
   </div>
 </div>
